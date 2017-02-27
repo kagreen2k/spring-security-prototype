@@ -29,17 +29,25 @@ public class RegistrationController
       model.addAttribute("user", new UserDto());
       return "registration";
   }
+  
 
+  // TODO: change password - userDetailsManager.changePassword()
 
+  // TODO: password reset - need to do send email prototype with external credentials
+  
   @PostMapping("/register")
   public String registerUser(Model model, @ModelAttribute UserDto user) {
     
     logger.info("User registered: " + user);
     
-    // TODO: is password encryption "out of the box" functionality 
+    // TODO: is password encryption "out of the box" functionality ?
 
     // TODO: valid username (email address) / password
-    // TODO: check if user already exists
+    
+    
+    
+    // ----> TODO: check if user already exists - userDetailsManager.userExists(username)
+    
     
     
     UserDetails userDetails = withUsername(
